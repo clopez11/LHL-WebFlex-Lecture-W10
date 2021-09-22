@@ -1,0 +1,59 @@
+/* REMOVE DEFAULT STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  background: #d3d3d3;
+}
+p, a, h1, h2, h3, h4, h5, h6, img {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* ---------------------- */
+/* BOX MODEL EXAMPLE */
+/* ---------------------- */
+
+#box1 {
+  background: yellow;
+  padding: 10px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+#box2 {
+  background: orange;
+  padding: 30px;
+  margin: 20px;
+}
+
+
+/* ---------------------- */
+/* INLINE, BLOCK, INLINE-BLOCK */
+/* ---------------------- */
+.div-block {
+  background: orange;
+  margin: 10px;
+  height: 50px;
+  /* width: 300px; */
+}
+.div-block p {
+  text-align: center;
+  padding: 15px;
+}
+.a-inline {
+  background: fuchsia;
+  padding: 10px;
+  margin: 10px;
+}
+span {
+  color: #fff;
+}
+img.inline-block-img {
+  width: 250px;
+}
+a {
+  color: #2e2e2e;
+}

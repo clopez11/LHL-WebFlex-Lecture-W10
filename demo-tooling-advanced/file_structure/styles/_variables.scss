@@ -1,0 +1,109 @@
+// Site-specific variables.
+
+/// Breakpoints.
+$breakpoints: (
+	xs: 0,         // 0      - 575px  (iPhone 5, Pixel 2, 3)
+	sm: 36rem,     // 576px  - 767px  (iPhone 8 Plus, iPhone X, Galaxy S11)
+	md: 48rem,     // 768px  - 1023px (iPad Portrait)
+	lg: 64rem,     // 1024px - 1365px (iPad Landscape)
+	xl: 85.375rem, // 1366px - 1699px (Any desktop or laptop)
+	xxl: 106.25rem // 1700px - up
+);
+
+$max-content-well-width: 80rem; // 1280px
+$max-feature-image-width: 57.5rem; // 920px;
+
+/// CSS variable default values, for use in calculations.
+$css-variables: (
+	--body-margin: (
+		xs: 1rem,
+		sm: 1.5rem,
+		md: max(2rem, calc((100% - #{$max-feature-image-width})/2)),
+		lg: max(3rem, calc((100% - #{$max-content-well-width})/2)),
+		xl: calc((100vw - #{$max-content-well-width})/2)
+	),
+	--grid-columns: (
+		xs: 1,
+		sm: 1,
+		md: 2,
+		lg: 2,
+		xl: 3
+	),
+	--grid-gap: (
+		xs: 1.5rem 2.5rem,
+		md: 1.25rem 1rem,
+	),
+);
+
+// Fonts and colours.
+$body-font-family: source-serif-pro, serif;
+$accent-font: 'Jost', sans-serif;
+$title-font: $accent-font;
+$body-background: #fff;
+$body-font-color: #000;
+$black-bg-color: #000;
+$body-font-faded-color: #999;
+$footer-background-color: #000;
+$food-red: #e2003d;
+$primary-color: $food-red;
+$button-primary-color: #fff;
+$button-primary-background-color: $primary-color;
+$button-nav-background-color: #252525;
+$ad-label-font-color: #757575;
+$ad-label-sponsor-font-color: #767676;
+$error-font-color: #f00;
+$matte-black: #151515;
+$loader-bg-color: #f2f2f2;
+$header-border-color: #eaeaea;
+$related-content-background-color: #f4eef0;
+$recipe-filter-color: $matte-black;
+
+// Generic colours.
+$color-grey: #808080;
+$color-grey-12: #1f1f1f;
+$color-grey-25: #3e3e3e;
+$color-grey-35: #595959;
+$color-grey-50: $color-grey;
+$color-grey-60: #999;
+$color-grey-75: #bebebe;
+$color-grey-85: #d8d8d8;
+$color-darkgrey: #a9a9a9;
+$color-dimgrey: #646464;
+$color-lightgrey: #d4d4d4;
+$color-amour: #f4eef0;
+
+// Font weights.
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-heavy: 900;
+
+// Header variables
+$mobile-navbar-height: 4.5rem;
+$desktop-navbar-height: 6.625rem;
+
+/// Miscellaneous behaviours/spacing.
+$default-transition: .2s ease-out;
+$default-fade-in: fade-in 0.5s ease-in;
+$site-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #141414 100%);
+$site-bg-gradient: linear-gradient(180deg, $body-background 0%, $color-amour 15%, $color-amour 100%);
+$text-drop-shadow: 0.125rem 0.125rem 0.438rem #303030;
+
+// Footer logos
+$logo-corus: url('/images/icons/corus-logo.svg') !default;
+$logo-complex: url('/images/icons/complex.svg') !default;
+$logo-etcanada: url('/images/icons/ETCanada19.svg') !default;
+$logo-foodnetwork: url('/images/icons/food-network.svg') !default;
+$logo-globalnews: url('/images/icons/global-news.svg') !default;
+$logo-globaltv: url('/images/icons/global.svg') !default;
+$logo-hgtv: url('/images/icons/hgtv.svg') !default;
+$logo-historia: url('/images/icons/historia.svg') !default;
+$logo-history: url('/images/icons/history.svg') !default;
+$logo-showcase: url('/images/icons/showcase.svg') !default;
+$logo-slice: url('/images/icons/slice.svg') !default;
+$logo-slice-white: url('/images/icons/slice-logo-white.svg') !default;
+$logo-wnetwork: url('/images/icons/w-network.svg') !default;

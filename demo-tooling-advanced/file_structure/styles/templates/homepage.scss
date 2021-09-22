@@ -1,0 +1,61 @@
+.homepage {
+	background: $site-bg-gradient;
+	padding-bottom: 0.0625rem;
+}
+
+.homepage-newest-content-container {
+	margin: 2.8125rem 0;
+
+	@include breakpoint-up(xl) {
+		margin: 5.0625rem 0;
+	}
+}
+
+.homepage-tag-sections-container {
+	padding: 0 var(--body-margin);
+
+	.tag-section {
+		&--title {
+			font-family: $accent-font;
+			font-size: 1.375rem;
+			font-weight: $font-weight-medium;
+			letter-spacing: 0.0775rem;
+			line-height: 1.625rem;
+			padding-bottom: 1rem 0;
+			text-transform: uppercase;
+
+			@include breakpoint-up(sm) {
+				font-size: 1.75rem;
+				letter-spacing: 0.1206rem;
+				line-height: 2.5625rem;
+				padding: 1.375rem 0 0.625rem;
+			}
+
+			@include breakpoint-up(md) {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.post-block-grid {
+		padding: 0;
+	}
+
+	.see-more-container {
+		margin: 4rem 0 4.625rem;
+		text-align: center;
+
+		@include breakpoint-up(sm) {
+			margin: 5.1875rem 0 4.375rem;
+		}
+
+		@include breakpoint-up(lg) {
+			margin: 8.5rem 0 7.5rem;
+		}
+
+		.see-more {
+			@extend %load-more;
+		}
+	}
+
+}

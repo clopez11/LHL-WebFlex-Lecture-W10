@@ -1,0 +1,133 @@
+.recipes {
+	&-header {
+		background-image: linear-gradient($body-background 0%, $body-background 50%, $color-amour 100%);
+		padding-bottom: 1.5rem;
+
+		@include breakpoint-up(lg) {
+			padding-bottom: 3.375rem;
+		}
+	}
+
+	&-title {
+		letter-spacing: 0.1119rem;
+		margin: 1.675rem 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include breakpoint-between(xs, sm) {
+			margin-top: 2.5rem;
+		}
+		@include breakpoint-between(sm, lg) {
+			margin-top: 3.75rem;
+		}
+
+		@include breakpoint-up(md) {
+			letter-spacing: 0.1719rem;
+		}
+		@include breakpoint-up(lg) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&-filters {
+		display: none;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 2rem var(--body-margin);
+		padding: 0 2.125rem;
+
+		@include breakpoint-up(lg) {
+			display: flex;
+		}
+	}
+
+	.selected-filters {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 0 var(--body-margin);
+		padding: 0;
+
+		@include breakpoint-up(lg) {
+			border-bottom: 0.0625rem solid $color-grey-85;
+			padding: 0 2.125rem;
+		}
+	}
+
+	.selected-filter {
+		align-items: center;
+		background-color: $food-red;
+		border-radius: 0.0625rem;
+		color: $button-primary-color;
+		display: flex;
+		flex-direction: row;
+		margin: 1rem 0.5rem 1rem 0;
+		padding: 0.125rem 0.625rem;
+
+		@include breakpoint-up(lg) {
+			margin-right: 1rem;
+		}
+
+		&:last-child {
+			margin-bottom: 1rem;
+
+			@include breakpoint-up(lg) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&-name {
+			font-family: $title-font;
+			font-size: 0.6875rem;
+			font-weight: $font-weight-medium;
+			letter-spacing: 0.0475rem;
+		}
+
+		&-unselect {
+			cursor: pointer;
+			margin-left: 1rem;
+			position: relative;
+			transition: height $default-transition;
+			width: 0.625rem;
+
+			&:hover {
+				&::before,
+				&::after {
+					height: 0.6875rem;
+					top: 0.6875rem;
+				}
+			}
+		}
+
+		&-unselect::before,
+		&-unselect::after {
+			background-color: $body-background;
+			content: ' ';
+			height: 0.625rem;
+			left: 0.25rem;
+			position: absolute;
+			top: 0.625rem;
+			width: 0.125rem;
+
+
+		}
+
+		&-unselect::before {
+			transform: rotate(45deg);
+		}
+
+		&-unselect::after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	.recipes-block {
+		background-color: $color-amour;
+		padding-bottom: 2.5rem;
+
+		@include breakpoint-up(lg) {
+			padding-bottom: 3.375rem;
+		}
+	}
+}

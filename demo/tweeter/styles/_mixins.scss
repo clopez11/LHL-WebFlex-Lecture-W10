@@ -1,0 +1,12 @@
+@mixin add-underline($decoration, $color, $style) {
+  text-decoration: $decoration;
+  text-decoration-color: $color;
+  text-decoration-style: $style;
+}
+
+// Breakpoints for Media Queries - Mobile-First Design
+@mixin screen-min($min) { 
+  @media (min-width: $min) { 
+    @content 
+  } 
+};

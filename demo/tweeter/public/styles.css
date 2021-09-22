@@ -1,0 +1,152 @@
+/* Reset Default Styles */
+*, ::after, ::before {
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1rem;
+}
+
+/* Global Styles */
+body {
+  background-color: #ecedf0;
+  font-family: "Roboto", sans-serif;
+  padding: 0.625rem;
+  width: 100vw;
+}
+
+/* Section: Header */
+.header-main {
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.625rem rgba(90, 97, 105, 0.12);
+  font-size: 0.8125rem;
+  height: 3.75rem;
+}
+.header-main .logo {
+  float: left;
+  height: auto;
+  margin-top: -2.8125rem;
+  padding: 0.625rem;
+  width: 9.375rem;
+}
+.header-main .header-profile {
+  display: inline;
+  float: right;
+  padding: 0.625rem;
+}
+.header-main .header-profile .profile-name {
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-decoration-style: double;
+  color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  font-size: 1em;
+  margin-right: 0.1875rem;
+  position: relative;
+  top: -0.75rem;
+}
+.header-main .header-profile .profile-image {
+  border-radius: 50%;
+  height: auto;
+  width: 40px;
+}
+
+/* Section: Tweet */
+.new-tweet {
+  padding: 1.5rem;
+}
+.new-tweet .page-title {
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-decoration-style: single;
+  clear: left;
+  color: #3d5170;
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.75rem 0;
+}
+.new-tweet .new-tweet-form label {
+  color: #818ea3;
+  font-size: 0.625rem;
+  letter-spacing: 0.125rem;
+}
+.new-tweet .new-tweet-form #tweet-text {
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+  display: block;
+  height: 3.125rem;
+  margin-top: 0.1875rem;
+  width: 100%;
+}
+.new-tweet .new-tweet-form .new-tweet-counter {
+  margin-top: 0.3125rem;
+}
+.new-tweet .new-tweet-form .new-tweet-counter button {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.4375rem 0.875rem;
+}
+.new-tweet .new-tweet-form .new-tweet-counter .counter {
+  color: #3d5170;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Tweets */
+.tweets {
+  margin: 0.75rem 1.5rem;
+}
+.tweets .page-title {
+  color: #3d5170;
+}
+.tweets .tweets-content {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 75rem) {
+  .tweets .tweets-content {
+    flex-direction: row;
+  }
+}
+.tweets .tweet-card {
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  margin: 0.3125rem;
+  padding: 1.5625rem;
+}
+.tweets .tweet-card .tweet-card-body p {
+  color: #868e96;
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding-bottom: 1.25rem;
+}
+.tweets .tweet-card-footer {
+  border-radius: 0 0 0.625rem 0.625rem;
+  border-top: 0.0625rem solid #e1e5eb;
+  padding: 1.25rem 0;
+}
+.tweets .tweet-card-footer img {
+  box-shadow: 0 0 0 0.125rem #fff, 0 0.1875rem 0.4375rem rgba(90, 97, 105, 0.5);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  clear: both;
+  float: left;
+  width: 2.5rem;
+}
+.tweets .tweet-card-footer .tweet-card-footer-body {
+  margin-top: 0.625rem;
+}
+.tweets .tweet-card-footer .tweet-card-footer-body .user {
+  color: #868e96;
+  margin-left: 0.625rem;
+}
+.tweets .tweet-card-footer .tweet-card-footer-body .date {
+  color: rgba(0, 0, 0, 0.8);
+}

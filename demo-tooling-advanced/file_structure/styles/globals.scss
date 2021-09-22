@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+
+	@each $variable, $map in $css-variables {
+		@include breakpoint-property($map, $variable);
+	}
+}
+
+* {
+	box-sizing: border-box;
+
+	@include focus-outline($body-font-color);
+}
+
+body {
+	@extend %body-font;
+	background: $body-background;
+	color: $body-font-color;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	overscroll-behavior: none;
+	padding: 0;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+}
+
+a {
+	color: $body-font-color;
+	position: relative;
+	text-decoration: none;
+}
+
+p {
+	@extend %body-font;
+}
+
+// H1, H2... TBD
+
+h1 {
+	@extend %h1-style;
+}
+
+h2 {
+	@extend %h2-style;
+}
+
+h3 {
+	@extend %h3-style;
+}
+
+h4 {
+	@extend %h4-style;
+}
+
+h5 {
+	@extend %h5-style;
+}
+
+button {
+	background: transparent;
+	border: 0;
+	color: $body-font-color;
+	cursor: pointer;
+	font: 1rem $accent-font;
+	pointer-events: visible;
+}
+
+.button-primary {
+	@extend %button-primary;
+}

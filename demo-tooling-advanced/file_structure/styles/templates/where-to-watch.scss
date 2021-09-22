@@ -1,0 +1,102 @@
+.where-to-watch {
+	display: flex;
+	flex-direction: column;
+	padding: 1.125rem var(--body-margin) 0.75rem;
+
+	h2 {
+		font-family: $title-font;
+		font-size: 1.375rem;
+		letter-spacing: 0.10rem;
+		font-weight: $font-weight-medium;
+		margin-bottom: 3.4375rem;
+	}
+
+	h3 {
+		font-family: $title-font;
+		text-transform: uppercase;
+		letter-spacing: 0.09rem;
+		font-weight: $font-weight-medium;
+		margin-bottom: 2.3125rem;
+		margin-top:0;
+
+		@include breakpoint-up(xs) {
+			font-size: 1.125rem;
+		}
+
+		@include breakpoint-up(sm) {
+			font-size: 1.375rem;
+		}
+	}
+
+	.where-to-watch__channel_single {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 3.875rem;
+
+
+		.channel-logo {
+
+			@include breakpoint-up(xs) {
+				width: 8.75rem;
+			}
+
+			@include breakpoint-up(sm) {
+				width: 12.5rem;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.channel-info {
+			margin-left: 0.5rem;
+			
+			@include breakpoint-up(xs) {
+				max-width: 52%;
+			}
+
+			@include breakpoint-up(sm) {
+				margin-left: 1rem;
+			}
+
+			@include breakpoint-up(md) {
+				max-width: 55%;
+			}
+			
+			word-wrap: break-word;
+
+			.channel-title {
+				font-size: 0.68rem;
+				color:$color-dimgrey;
+				font-family: $title-font;
+				text-transform: uppercase;
+				letter-spacing: 0.04rem;
+				font-weight: $font-weight-medium;	
+				margin-bottom: 0.4375rem;
+			}
+
+			.channel-desc {
+				line-height: 1.62rem;
+
+				& > p {
+					margin:0px;
+				}
+
+				a {
+					text-decoration: none;
+					@include add-underline($food-red);
+				}
+			}
+
+			.channel-listings {
+				p {
+					line-height: 1.625rem;
+					letter-spacing: 0.002rem;
+					margin: 0;
+				}
+			}
+
+		}
+	}
+}

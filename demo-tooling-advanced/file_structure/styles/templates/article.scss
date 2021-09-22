@@ -1,0 +1,444 @@
+
+.article-header {
+	margin: 2.25rem var(--body-margin) 0;
+
+	@include breakpoint-up(xl) {
+		margin: 5.625rem auto 0;
+		max-width: 66.5rem;
+	}
+}
+
+.article-body-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 0.75rem 0;
+
+	@include breakpoint-up(lg) {
+		flex-direction: row;
+		margin: 2.5rem var(--body-margin);
+	}
+
+	.article-content,
+	.article-footer,
+	.article-affiliate {
+		margin: 0 var(--body-margin);
+
+		@include breakpoint-up(lg) {
+			margin: 0;
+		}
+	}
+
+	.article-video {
+		margin: 2rem var(--body-margin);
+
+		@include breakpoint-up(lg) {
+			margin: 0 0 4.5rem;
+		}
+	}
+}
+
+.article-category {
+	text-align: center;
+	text-transform: uppercase;
+
+	&-link {
+		@extend %h5-style;
+		color: $primary-color;
+		letter-spacing: 0.05rem;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		text-decoration-thickness: 0.0938rem;
+		transition: $default-transition;
+
+		&:hover {
+			text-decoration-color: $primary-color;
+		}
+	}
+}
+
+.article-title {
+	padding: 0;
+	text-align: center;
+
+	@include breakpoint-up(lg) {
+		margin: 0 0 1.5rem 0;
+	}
+
+	@include breakpoint-up(xs) {
+		margin: 0 0 1rem 0;
+	}
+
+	&.is-long-title {
+		font-size: 1.375rem;
+		line-height: 1.875rem;
+
+		@include breakpoint-up(lg) {
+			font-size: 2.5rem;
+			line-height: 3.25rem;
+		}
+	}
+}
+
+.article-metadata {
+	margin-top: 1.25rem;
+	text-align: center;
+
+	@include breakpoint-up(lg) {
+		margin-top: 2rem;
+	}
+}
+
+.article .author-byline,
+.article-date,
+.article-readtime {
+	@extend %h5-style;
+}
+
+.article .author-byline {
+	font-size: 0.75rem;
+	font-weight: $font-weight-semi-bold;
+	letter-spacing: 0.02rem;
+	line-height: 1.25rem;
+	margin: 0.5rem auto;
+	width: 18.75rem;
+
+	@include breakpoint-up(sm) {
+		width: unset;
+	}
+
+	@include breakpoint-up(lg) {
+		margin: 1.125rem 0 0.375rem;
+	}
+
+	&-author {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: underline;
+		text-decoration-thickness: 0.0938rem;
+		text-transform: uppercase;
+		transition: $default-transition;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+.article-date {
+	font-size: 0.625rem;
+	color: $color-dimgrey;
+	margin: 0.3125rem 0 1.875rem;
+	letter-spacing: 0.0156rem;
+	text-transform: capitalize;
+
+	@include breakpoint-up(lg) {
+		font-size: 0.75rem;
+		margin: 0.625rem 0 2.5rem;
+	}
+}
+
+.article-featured-image-wrapper {
+	margin: 1rem auto 2.5rem;
+	max-width: $max-feature-image-width;
+
+	@include breakpoint-up(md) {
+		margin: 1rem var(--body-margin) 2.5rem;
+	}
+
+	@include breakpoint-up(lg) {
+		margin: 0 auto 2.5rem;
+	}
+}
+
+.article-featured-image {
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		padding-bottom: 67%;
+	}
+
+	img {
+		display: block;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		width: 100%;
+	}
+
+	&-caption {
+		@extend %image-caption;
+		height: auto;
+		letter-spacing: 0.03rem;
+		margin: .5rem var(--body-margin);
+		word-break: break-word;
+
+		@include breakpoint-up(md) {
+			margin: .5rem 0;
+		}
+	}
+}
+
+.article-body {
+	margin: 0;
+
+	@include breakpoint-up(lg) {
+		flex: 1 0 33.75rem;
+		margin-right: 5%;
+		margin-top: 1.5rem;
+		max-width: $max-feature-image-width;
+		width: 100%;
+	}
+
+	@include breakpoint-up(xl) {
+		margin-right: 7.75rem;
+	}
+}
+
+.article-content,
+.gallery-slide-description,
+.recipe-description,
+.recipe-step-content {
+	@extend %body-font;
+
+	> * {
+		width: 100%;
+	}
+
+	> p {
+		width: 100%;
+	}
+
+	a {
+		text-decoration: underline;
+		text-decoration-color: $primary-color;
+		text-underline-offset: 0.0625rem;
+		transition: $default-transition;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	/* Pullquote styling */
+	blockquote {
+		font-family: $body-font-family;
+		font-size: 1.5rem;
+		font-weight: $font-weight-semi-bold;
+		letter-spacing: 0.019rem;
+		line-height: 2.25rem;
+		margin: 3.125rem auto;
+		max-width: 28rem;
+		position: relative;
+		text-align: center;
+		width: 100%;
+
+		&::after,
+		&::before {
+			border-bottom: 0.44rem solid $body-font-color;
+			content: ' ';
+			display: block;
+			font-size: 6rem;
+			margin: auto;
+			position: relative;
+			width: 25%;
+		}
+
+		&::before {
+			border-bottom: unset;
+			border-top: 0.44rem solid $body-font-color;
+		}
+
+		> *,
+		> p {
+			display: block;
+			font-family: $body-font-family;
+			font-size: 1.5rem;
+			font-weight: $font-weight-semi-bold;
+			letter-spacing: 0.019rem;
+			line-height: 2.25rem;
+			margin: 1.5rem;
+			position: relative;
+
+			&::after,
+			&::before {
+				content: '\201C';
+				font-family: $body-font-family;
+			}
+
+			&::after {
+				content: '\201D';
+			}
+		}
+
+		a {
+			text-decoration: underline;
+			text-decoration-color: $primary-color;
+			text-underline-offset: 0.0625rem;
+			transition: $default-transition;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	h3,
+	h2 {
+		@extend %h3-style;
+
+		letter-spacing: 0.063rem;
+		margin: 2.188rem 0 0.5rem;
+		text-transform: none;
+
+		@include breakpoint-up(xl) {
+			margin-top: 2.8125rem;
+		}
+	}
+
+	.wp-caption,
+	img {
+		align-self: center;
+		margin: 2.5rem auto;
+		max-width: 100%;
+		padding: 0;
+		text-align: center;
+
+		@include breakpoint-up(xl) {
+			align-self: flex-start;
+		}
+	}
+
+	img {
+		display: block;
+
+		/* As long as the image isn't loaded set width to 0 pixel, so aspect ratio knows to take width from height and not vice versa */
+		.lazyload {
+			width: 0;
+		}
+	}
+
+	.wp-caption {
+		display: block;
+		width: auto !important;
+	}
+
+	img[data-sizes="auto"] {
+		display: block;
+		width: 100%;
+	}
+
+	.wp-caption-text {
+		@extend %image-caption;
+		margin: 0.5rem 0 0 0;
+		max-width: 100%;
+		overflow: hidden;
+		padding-left: 0.0938rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.article-end-ribbon {
+		background: $body-font-color;
+		height: 0.5rem;
+		margin: 3.25rem auto 2.875rem;
+		width: 4.5rem;
+	}
+
+	iframe {
+		max-width: 100%;
+	}
+
+	.adWrapper {
+		margin: 2.5rem auto 3.125rem;
+
+		@include breakpoint-up(md) {
+			margin: 3.75rem auto;
+		}
+	}
+}
+
+.post-tags {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 1rem var(--body-margin) 2rem;
+	padding: 0;
+
+	@include breakpoint-up(md) {
+		margin: 3rem var(--body-margin);
+	}
+
+	@include breakpoint-up(lg) {
+		margin: 4rem 0;
+	}
+
+	.post-tag {
+		list-style-type: none;
+		margin: 1rem 1rem 1rem 0;
+
+		.button-primary {
+			background-color: $body-font-color;
+			border: 0.125rem solid $body-font-color;
+			border-radius: 0.0625rem;
+			font-size: 0.75rem;
+			font-weight: $font-weight-semi-bold;
+			letter-spacing: 0.013rem;
+			line-height: 0.813rem;
+			padding: 0.625rem 1rem;
+			text-decoration: none;
+			word-break: keep-all;
+
+			&:hover,
+			&:active {
+				background-color: $body-background;
+				color: $body-font-color;
+			}
+
+			@include focus-outline($primary-color);
+		}
+	}
+}
+
+.article-affiliate-copy {
+	font-family: $body-font-family;
+	font-style: italic;
+	font-size: 0.875rem;
+	line-height: 1.375rem;
+	letter-spacing: 0.0156rem;
+	margin: 1.25rem 0 2.5rem;
+
+	@include breakpoint-up(md) {
+		font-size: 1rem;
+		line-height: 1.4375rem;
+		margin: 1.875rem 0;
+	}
+}
+
+.article-end-ribbon {
+	background: $primary-color;
+	height: 0.5rem;
+	margin: 3rem auto;
+	width: 4.5rem;
+
+	@include breakpoint-up(md) {
+		margin: 5rem auto;
+	}
+}
+
+.article-content-image {
+	margin: 0;
+	text-align: center;
+	width: 100%;
+
+	.wp-caption & {
+		text-align: left;
+	}
+}

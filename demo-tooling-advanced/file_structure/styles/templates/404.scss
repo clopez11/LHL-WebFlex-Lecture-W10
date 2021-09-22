@@ -1,0 +1,80 @@
+.four-zero-four-container {
+	align-items: center;
+	background-color: $food-red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 10.25rem;
+
+	@include breakpoint-up(xl) {
+		margin-top: -4.5rem;
+	}
+
+	.images-container {
+		height: auto;
+		margin: 4.625rem auto 0;
+		width: 15.875rem;
+
+		@include breakpoint-up(sm) {
+			width: 22.125rem;
+		}
+
+		@include breakpoint-up(xl) {
+			margin: 9rem auto 0;
+			width: 34.25rem;
+		}
+
+		.img-top {
+			animation: fadeOut 0.1s ease-in-out both;
+			animation-delay: 2s;
+		}
+
+		.img-bottom {
+			animation: fadeIn 0.3s ease-in-out both;
+			animation-delay: 2s;
+			margin-top: -2.75rem;
+
+			@include breakpoint-up(sm) {
+				margin-top: -3.55rem;
+			}
+
+			@include breakpoint-up(xl) {
+				margin-top: -5.25rem;
+			}
+		}
+	}
+
+	p {
+		color: $button-primary-color;
+		font-family: $body-font-family;
+		font-size: 1.125rem;
+		font-weight: $font-weight-semi-bold;
+		line-height: 1.75rem;
+		margin: 3.25rem;
+		text-align: center;
+
+		@include breakpoint-up(xl) {
+			font-size: 1.375rem;
+			margin: 5.625rem 13.625rem;
+		}
+	}
+
+	a {
+		@extend %button-primary;
+		background-color: $body-font-color;
+		border: 0.125rem solid $body-font-color;
+		font-size: 0.875rem;
+		height: 4rem;
+		line-height: 1.25rem;
+		margin: 0 auto;
+		padding: 1.25rem;
+		transition: background-color .1s cubic-bezier(0.65, 0.05, 0.36, 1);
+		width: 12.8125rem;
+
+		&:active,
+		&:hover {
+			background-color: $body-background;
+			border: 0.0625rem solid $body-background;
+		}
+	}
+}
