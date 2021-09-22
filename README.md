@@ -214,6 +214,7 @@ display: block;
 * Language that we write in and then needs to be processed or translated before we can run it.
 * Browser does not understand SASS. It only understands in CSS.
 * Resource: [SASS](https://sass-lang.com/)
+* Resource: [SASS MEDIA QUERIES](https://www.vincentntang.com/sass-media-queries/)
 
 ## Intro to SASS/SCSS
 * `npm install sass`
@@ -323,6 +324,5 @@ body {
 
 ---
 
-* [Class Recording](https://us02web.zoom.us/rec/share/Az12ixWczQLeDZAuErPfEtZB7xtPGEP9FK-9m0oC3Qg0soUQHBzojgz-5JNs3IdK.HiC2zTfZzkWkaW0B)
-* **Access Passcode:** p2$L44Wr
+* [Class Recording](https://drive.google.com/drive/folders/1rPR3recGYFVs4YzAeRBZivUmSOhlMhbn?usp=sharing)
 * [Notes](https://github.com/clopez11/LHL-WebFlex-Lecture-W10)
