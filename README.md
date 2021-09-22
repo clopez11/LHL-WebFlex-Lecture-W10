@@ -324,5 +324,5 @@ body {
 ---
 
 * [Class Recording](https://us02web.zoom.us/rec/share/Az12ixWczQLeDZAuErPfEtZB7xtPGEP9FK-9m0oC3Qg0soUQHBzojgz-5JNs3IdK.HiC2zTfZzkWkaW0B)
-* Access Passcode: p2$L44Wr
-* Notes:
+* **Access Passcode:** p2$L44Wr
+* [Notes](https://github.com/clopez11/LHL-WebFlex-Lecture-W10)
